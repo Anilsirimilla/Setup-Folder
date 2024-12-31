@@ -1,0 +1,47 @@
+***********Jenkins Setup************
+1.Navigate to URL = https://www.jenkins.io/download/
+2.Click on "Generic Java package (.war)"
+3.In command prompt go to downloaded file path = "cd C:\Users\Sirimilla Anil\Downloads"
+4.java -jar jenkins.war -httpPort=9090/8080
+
+*****Creating new Job************
+5.Click on "New Item"
+6.Enter job name = Selenium
+7.Select "Freestyle project"
+8.Click on "OK"
+****Configuration window*******
+9.In 'Source Code Management' section if code is present in Git select "Git" option and past the URL/Select "None"
+10.Click on 'Advanced' drop down & select "Use custom workspace" check box
+a) Copy the project path from eclipse and past it "C:\Users\Sirimilla Anil\eclipse-workspace\Selenium"
+
+11.Navigate to 'Build Steps'
+a) Click on "Add build step" drop down
+b) Select "Invoke top-level Maven targets" option
+c) Enter command as "test Dbrowser=edge -PAlltests"
+d) Click on "Save" button
+e) For triggering test click on "Build Now"
+
+12.For avoiding hardcoding browser name
+a) Navigate to Configure
+b) Click on "This project is parameterized" check box
+c) Click on "Add parameter" drop down
+d) Select "choice parameter" option
+Name = browserName
+Choices = chrome,firefox,edge
+e) Navigate to 'Build Steps' section
+f) Update command as "test -PAlltests -Dbrowser="$browserName""
+g) Click on save button
+
+13.Same for profiles also
+a) Update command as "test -P"$Profile" -Dbrowser="$browserName""
+
+13.Scheduleing Jenkins job
+a) Navigate to Configure
+b) Navigate to 'Build Triggers' section
+c) Select "Build periodically" check box
+d) * * * * * (H 5 * * *[every day 5 o clock]) Note: Don't shut down PC
+Min (0-59)
+Hrs (0-23)
+Day (1-31)
+Month (1-12)
+Day Week (0-7)

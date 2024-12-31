@@ -1,0 +1,11 @@
+*********TestNG***********
+1.If JAVA 8 is in your PC need to use "Latest version of TestNG 6" or Above 8 version of JAVA need to use "Latest version of TestNG"
+
+2.Dependencies List
+a) Selenium java
+b) TestNG (6 or latest)
+c) Webdriver manager
+d) jackson-databind
+e) extentreports
+
+3.

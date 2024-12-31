@@ -1,0 +1,40 @@
+*************Maven setup******************
+
+1.Navigate to URL = https://maven.apache.org/download.cgi
+2.For Windows Click on = Source zip archive(Links column) [For Mac = Source tar.gz archive]
+3.System variables: --
+MAVEN_HOME
+Path(upto folder)
+
+In Path (Upto bin)
+
+******Maven commands*******
+4.mvn -version
+5.Navigate to URL = https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html
+6.Navigate to section (Using Suite XML Files)
+<profiles>
+	<profile>
+		<id>AllTests</id>
+		<build>
+			<pluginManagement><!-- lock down plugins versions to avoid using
+				Maven defaults (may be moved to parent pom) -->
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.5.2</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>testSuites/AllTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</pluginManagement>
+		</build>
+	</profile>
+</profiles>
+
+7.In command prompt go to project Path = "cd C:\Users\Sirimilla Anil\eclipse-workspace\Selenium"
+8.mvn test -PAllTests
+9."mvn test -Dbrowser=firefox -PAllTests" or "mvn test -PAlltests -Dbrowser=edge"

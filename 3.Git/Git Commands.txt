@@ -1,0 +1,36 @@
+********Git Setup*******
+1.Navigate to URL : https://git-scm.com/downloads
+2.Click on windows.
+3.Download Git
+4.
+
+*********Git Commands********
+
+//////////For the first time////////////
+
+1.git config --global user.name "anil"
+2.git config --global user.email "anilsirimilla@gmail.com"
+3.cd C:\Users\Sirimilla Anil\eclipse-workspace\Selenium  (Navigate to project folder)
+4.git init (For the first time, initializing git)
+
+Normal code -> Staging/stash ->commit ->GitHub
+
+5.git add * (For the all files)
+6.git status (For checking added files)
+7.git commit -m "first commit"
+8.git remote add origin https://github.com/Anilsirimilla/Selenium-Framework-with-Maven-Jenkins-integration.git
+9.git push origin master
+
+////////Importing/cloning code from git to PC///////////
+
+1.git config --global user.name "anil"
+2.git config --global user.email "anilsirimilla@gmail.com"
+3.git clone https://github.com/Anilsirimilla/Selenium-Framework-with-Maven-Jenkins-integration.git
+
+/////////Pushing or updating code into Git////////////
+
+1.git push origin master
+
+/////////Pulling latest updated code to PC from Git///////////
+
+1.git pull origin master
