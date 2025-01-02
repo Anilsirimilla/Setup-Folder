@@ -1,7 +1,7 @@
 *************Maven setup******************
 
 1.Navigate to URL = https://maven.apache.org/download.cgi
-2.For Windows Click on = Source zip archive(Links column) [For Mac = Source tar.gz archive]
+2.For Windows Click on = Binary zip archive(Links column) [For Mac = Source tar.gz archive/Binary tar.gz archive]
 3.System variables: --
 MAVEN_HOME
 Path(upto folder)
